@@ -1,7 +1,14 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import {Inter} from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import {BsFillMoonStarsFill} from "react-icons/bs";
+import {AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube} from "react-icons/ai";
+import Image from "next/image";
+import deved from "../public/dev-ed-wave.png"
+
+import design from "../public/design.png"
+import code from "../public/code.png"
+import consulting from "../public/consulting.png"
+
 
 const inter = Inter({subsets: ['latin']})
 
@@ -14,7 +21,59 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <main>
+            <main className={"bg-white px-10"}>
+                <section className={"min-h-screen"}>
+                    <nav className={"py-10 mb-12 flex justify-between"}>
+                        <h1 className={"text-xl font-burtons"}>developedbyed</h1>
+                        <ul className={"flex items-center"}>
+                            <li>
+                                <BsFillMoonStarsFill className={"cursor-pointer text-2xl"}/>
+                            </li>
+                            <li>
+                                <a href={""} className={"bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"}>Resume</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div className="text-center p-10 py-10">
+                        <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
+                            Dimitri Marco
+                        </h2>
+                        <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
+                            Developer and designer.
+                        </h3>
+                        <p className="text-md py-5 leading-8 text-gray-900 dark:text-gray-500 max-w-xl mx-auto md:text-xl">
+                            Freelancer providing services for programming and design content
+                            needs. Join me down below and lets get cracking!
+                        </p>
+                        <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+                            <AiFillTwitterCircle />
+                            <AiFillLinkedin />
+                            <AiFillYoutube />
+                        </div>
+                        <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
+                            <Image src={deved} layout="fill" objectFit="cover" />
+                        </div>
+
+                        <section>
+                            <div>
+                                <h3 className="text-3xl py-1 dark:text-white ">Services I offer</h3>
+                                <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-500">
+                                    Since the beginning of my journey as a freelance designer and
+                                    developer, Ive done remote work for
+                                    <span className="text-teal-500"> agencies </span>
+                                    consulted for <span className="text-teal-500">startups </span>
+                                    and collaborated with talanted people to create digital products
+                                    for both business and consumer use.
+                                </p>
+                                <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-500">
+                                    I offer from a wide range of services, including brand design,
+                                    programming and teaching.
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </section>
             </main>
         </div>
     );
